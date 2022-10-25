@@ -1,26 +1,24 @@
 import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) {
-        Animal dog = new Animal("Dog", 20);
-        Animal cat = new Animal("Cat", 10);
+   public static void main(String[] args){
+       Scanner scanner = new Scanner(System.in);
+       List<Person> people = new ArrayList<>();
+       int n = Integer.parseInt(scanner.nextLine());
 
-        //      System.out.println(dog.getAge());
-        //       System.out.println(cat.getAge());
+       for(int i = 0; i < n; i++){
+           String[] input = scanner.nextLine().split("\\s+");
+           String name = input[0];
+           int age = Integer.parseInt(input[1]);
+           Person person = new Person(name, age);
+           people.add(person);
+       }
 
-        //      dog.setAge(21);
-        //       cat.setAge(11);
 
-        //       System.out.println(dog.getAge());
-
-
-        System.out.println(Animal.animalCounter);
-
-        Animal rabbit = new Animal("Rabbit", 10);
-        System.out.println(Animal.animalCounter);
-
-    }
-        public void test () {
-            System.out.println("Testing...");
-        }
+       for(Person per : people){
+           System.out.println(per);
+       }
+   }
 }
