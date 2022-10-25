@@ -18,4 +18,8 @@ public class Animal {
         return "The breed is: " + this.getBreed()
                 + " and its age is " + this.getAge();
     }
+
+    public void testing(){
+        test++;
+    }
 }
