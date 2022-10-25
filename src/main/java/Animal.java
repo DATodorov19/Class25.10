@@ -1,6 +1,8 @@
 public class Animal {
     private String breed;
     private int age;
+
+    public static int test = 1;
     public Animal() {this.age = 10;}
     public Animal(String breed, int age){
         this.breed = breed;
