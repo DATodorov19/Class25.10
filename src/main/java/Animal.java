@@ -1,12 +1,12 @@
 public class Animal {
     private String breed;
     private int age;
-
-    public static int test = 1;
+    public static int animalCounter = 0;
     public Animal() {this.age = 10;}
     public Animal(String breed, int age){
         this.breed = breed;
         this.age = age;
+        animalCounter++;
     }
     public String getBreed(){return breed;}
     public void setBreed(String breed){this.breed = breed;}
@@ -20,6 +20,6 @@ public class Animal {
     }
 
     public void testing(){
-        test++;
+
     }
 }
